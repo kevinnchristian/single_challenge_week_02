@@ -1,11 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
-import { Text, View } from 'react-native';
+import { ApolloProvider } from '@apollo/client';
+
+import client from './src/services';
+import AppStartup from './src';
 
 export default function App() {
   return (
-    <View>
-      <StatusBar style="auto" />
-      <Text>Started app.</Text>
-    </View>
+    <ApolloProvider client={client}>
+      <AppStartup />
+    </ApolloProvider>
   );
 }
