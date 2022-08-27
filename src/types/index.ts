@@ -5,5 +5,15 @@ export interface ICharacter {
   gender: string;
   image: string;
   status: string;
-  favorite?: boolean;
+  favorite?: boolean,
+}
+
+export interface ICharacters {
+  characters: ICharacter[]
+}
+
+export interface ICharactersState {
+  characters: {
+    characters: ICharacter[]
+  }
 }

@@ -20,6 +20,7 @@
     "react-dom": "18.0.0",
     "react-native": "0.69.5",
     "react-native-web": "~0.18.7",
+    "react-redux": "^8.0.2",
     "redux": "^4.2.0"
   },
   "devDependencies": {

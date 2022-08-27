@@ -6,7 +6,10 @@ import {
   StyleSheet,
   StatusBar,
 } from 'react-native';
+import { Provider } from 'react-redux';
 import { useFonts } from 'expo-font';
+
+import store from './store';
 
 import Characters from './screens/characters';
 
@@ -16,25 +19,29 @@ const AppStartup = () => {
   });
 
   return (
-    <SafeAreaView>
-      <StatusBar
-        barStyle='light-content'
-        backgroundColor='transparent'
-        translucent
-      />
-      <View style={styles.container}>
-        {
-          fontsLoaded ?
-            <Characters />
-            :
-            <ActivityIndicator
-              size="large"
-              color="#E5EAEF"
-              style={{ paddingTop: Dimensions.get('window').height / 2 }}
-            />
-        }
-      </View>
-    </SafeAreaView>
+    <>
+      <Provider store={store}>
+        <SafeAreaView>
+          <StatusBar
+            barStyle='light-content'
+            backgroundColor='transparent'
+            translucent
+          />
+          <View style={styles.container}>
+            {
+              fontsLoaded ?
+                <Characters />
+                :
+                <ActivityIndicator
+                  size="large"
+                  color="#E5EAEF"
+                  style={{ paddingTop: Dimensions.get('window').height / 2 }}
+                />
+            }
+          </View>
+        </SafeAreaView>
+      </Provider>
+    </>
   );
 }
 

@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     textShadowColor: '#F2D64B',
     textShadowOffset: { width: -2, height: 1.8 },
     textShadowRadius: 6,
-    padding: 20,
+    paddingVertical: 20,
   }
 });
 

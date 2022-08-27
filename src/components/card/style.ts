@@ -9,17 +9,25 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     width: Dimensions.get('window').width - 150,
-    backgroundColor: '#B65CF2',
     borderRadius: 10,
-    margin: 12,
-    paddingHorizontal: 15,
-    paddingTop: 10,
+    marginVertical: 20,
+    paddingHorizontal: 5,
+    paddingTop: 5,
     paddingBottom: 10,
+    position: 'relative',
+  },
+  cardStar: {
+    elevation: 10,
+    position: 'absolute',
+    top: -2,
+    right: 6,
+    zIndex: 5,
   },
   cardImage: {
-    height: 200,
-    width: 220,
-    borderRadius: 4
+    height: 185,
+    width: 185,
+    borderRadius: 100,
+    elevation: 10,
   },
   cardTextBox: {
     flex: 1,
@@ -41,8 +49,7 @@ const styles = StyleSheet.create({
   cardDetailsButton: {
     backgroundColor: '#05F2AF',
     borderRadius: 4,
-    marginTop: 15,
-    marginBottom: 5,
+    marginTop: 10,
     paddingHorizontal: 20,
     paddingVertical: 6
   },
