@@ -41,7 +41,7 @@ const Card = ({
     <>
       <LinearGradient
         style={styles.cardBody}
-        colors={['#160a4045', '#b65cf22b', '#B65CF2']}
+        colors={['#02051b22', '#b65cf22b', '#B65CF2']}
       >
         <TouchableOpacity style={styles.cardStar}>
           <FontAwesome

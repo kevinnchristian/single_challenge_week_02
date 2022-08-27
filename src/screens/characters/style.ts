@@ -6,17 +6,20 @@ import {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    height: '100%',
     width: Dimensions.get('window').width,
   },
+  contentCards: {
+    alignSelf: 'center',
+  },
   title: {
+    alignSelf: 'center',
     color: '#05F2AF',
-    fontSize: 42,
+    fontSize: 44,
     fontFamily: 'get_schwifty',
     textShadowColor: '#F2D64B',
     textShadowOffset: { width: -2, height: 1.8 },
-    textShadowRadius: 6,
+    textShadowRadius: 4,
     paddingVertical: 20,
   }
 });

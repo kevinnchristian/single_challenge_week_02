@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
   container: {
     height: '100%',
     width: '100%',
-    backgroundColor: '#160A40',
+    backgroundColor: '#02051b',
     paddingTop: 24,
   }
 });

@@ -3,7 +3,7 @@ import {
   Dimensions,
   View,
   Text,
-  FlatList,
+  ScrollView,
 } from 'react-native';
 import { useEffect } from 'react';
 import { useQuery } from '@apollo/client';
@@ -42,18 +42,20 @@ const Characters = () => {
   const character = useSelector(charactersStateData);
 
   return (
-    <View style={styles.container}>
+    <ScrollView
+      showsVerticalScrollIndicator={true}
+      style={styles.container}
+    >
       <Text style={styles.title}>Rick Morty Redux</Text>
       {loading && <ActivityIndicator
         size="large"
         color="#E5EAEF"
         style={{ paddingTop: (Dimensions.get('window').height / 2) - 100 }}
       />}
-      {error && <Text style={{ color: '#F4F4F6' }}>Error.</Text>}
-      {character &&
-        < FlatList
-          data={character}
-          renderItem={({ item, index }) => <Card
+      {error && <Text style={{ color: '#E5EAEF' }}>Error.</Text>}
+      <View style={styles.contentCards}>
+        {character && character.map((item, index) => (
+          <Card
             key={index}
             id={item.id}
             image={item.image}
@@ -62,10 +64,10 @@ const Characters = () => {
             species={item.species == 'unknown' ? 'Unknown' : item.species}
             status={item.status == 'unknown' ? 'Unknown' : item.status}
             favorite={item.favorite}
-          />}
-        />
-      }
-    </View>
+          />
+        ))}
+      </View>
+    </ScrollView>
   );
 }
 

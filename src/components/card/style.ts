@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
   cardStar: {
     elevation: 10,
     position: 'absolute',
-    top: -2,
+    top: 4,
     right: 6,
     zIndex: 5,
   },
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15
   },
   cardTextName: {
-    color: '#F4F4F6',
+    color: '#E5EAEF',
     fontSize: 20,
     fontWeight: 'bold',
     textAlign: 'center'
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     paddingVertical: 6
   },
   cardTextDetailsButton: {
-    color: '#0C1440',
+    color: '#02051b',
     fontSize: 13,
     fontWeight: 'bold'
   },
